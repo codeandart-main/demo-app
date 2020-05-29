@@ -67,15 +67,6 @@ class HomePage extends StatelessWidget {
                   ),
               ),
 
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: RaisedButton(
-                  child: Text('Обновить'),
-                  onPressed: () {
-                    context.read<ProductDataProvider>().updateItemCard();
-                  }),
-              ),
-
               ...productData.items.map((value) {
                 return CatalogListTile(imgUrl: value.imgUrl);
               }).toList(),

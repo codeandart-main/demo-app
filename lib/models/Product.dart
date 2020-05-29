@@ -62,16 +62,4 @@ class ProductDataProvider with ChangeNotifier {
   Product getElementById(String id) 
     => _items.singleWhere((value) => value.id == id);
 
-  updateItemCard() {
-    _items[0] = Product(
-      id: 'p3',
-      title: 'Желтый РАЗРЫВ счастья',
-      description: ' Ты получишь настоящее удовольствие, когда попробуешь!',
-      price: 115.00,
-      imgUrl: 'https://www.recipetineats.com/wp-content/uploads/2019/09/Tequila-Sunrise.jpg',
-      color: '0xFFFFF59D',
-    );
-
-    notifyListeners();
-  }
 }
